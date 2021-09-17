@@ -8,6 +8,11 @@
  * For installation instructions, please visit this page: https://github.com/Sv443/ESP-Notifier#installation
  */
 
+// TODO: check if this works
+#ifndef String
+  #include <Arduino.h>
+#endif
+
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
 #include <WiFiClient.h>
@@ -27,16 +32,16 @@
                                 |___/
 */
 
-// Full URL to the server running Node-Notifier
-// Expected format: "http://IP_ADDRESS:PORT" (without trailing slash)
-#define SERVER_URL "http://192.168.178.45:8042"
+// The local IP address of the device running the Node-Notifier server
+#define SERVER_IP "192.168.178.45"
+
+// Pin of the button
+#define BUTTON_PIN 14
+// Active state of the button (LOW or HIGH)
+#define BUTTON_ACTIVE_STATE HIGH
 
 // Builtin LED feedback
 #define LED_FEEDBACK_ENABLED true
-
-// Pin of button (active high)
-#define BUTTON_PIN 14
-
 // BAUD rate (bytes/s) of the serial monitor (CTRL + SHIFT + M) in Arduino IDE
 #define SERIAL_BAUD_RATE 9600
 
@@ -44,9 +49,10 @@
 // If you need finer control, modify the getPostData() function to your liking
 #define NOTIFICATION_TITLE "TITLE"
 #define NOTIFICATION_MESSAGE "MESSAGE"
-#define NOTIFICATION_ICON "assets/test.png"
+#define NOTIFICATION_ICON "assets/tuerklingel.png"
 
 // If you need to send a lot of data, increase INTERNAL_JSON_MEM_SIZE below
+
 
 /* End of settings */
 
@@ -59,6 +65,7 @@
 
 // ArduinoJson allocated memory size - to calculate use https://arduinojson.org/v6/assistant/
 #define INTERNAL_JSON_MEM_SIZE 1000
+
 
 /* End of internal settings */
 
@@ -87,6 +94,9 @@ struct JsonParseRes {
   String message;
   String errorMsg;
 };
+
+// TODO: check this
+#define SERVER_URL "http://" . SERVER_IP . ":8042"
 
 /** Whether a request is currently processing (to debounce the button) */
 bool processing = false;
