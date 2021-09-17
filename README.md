@@ -14,4 +14,9 @@ ESP8266 sketch for [Sv443/Node-Notifier](https://github.com/Sv443/Node-Notifier)
 <br><br>
 
 ## Schematic:
-![schematic image](./schematic.png)
+
+<div align="center" style="text-align: center;">
+
+[![schematic image](./.github/schematic.png)](./.github/schematic.png)
+
+</div>
