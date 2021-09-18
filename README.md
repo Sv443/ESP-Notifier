@@ -124,7 +124,7 @@ Also make sure you adequately protect the `config.h` file, as it contains your W
 
 <br>
 
-## Dependencies:
+### Dependencies:
 - [ESP8266WiFi](https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266WiFi)
 - [ESP8266HTTPClient](https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266HTTPClient)
 - [ArduinoJson](https://arduinojson.org/)
