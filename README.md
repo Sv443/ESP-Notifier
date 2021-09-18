@@ -35,13 +35,15 @@ Other documents:
 
 ## Setup:
 1. Clone or download and extract this repository (see [releases](https://github.com/Sv443/ESP-Notifier/releases))
-3. Rename the file `config.h.template` to `config.h` and open it with a text editor
-3. Set your WiFi settings in `config.h`
-6. Start the [desktop client](https://github.com/Sv443/Node-Notifier) and copy its IP address
-2. Open the file [`ESP-Notifier.ino`](./ESP-Notifier.ino) in the [Arduino IDE](https://www.arduino.cc/en/software)
-3. Edit settings at the top of this file (like the server IP address)
-4. Upload the sketch with the Arduino IDE (<kbd>Ctrl</kbd> + <kbd>U</kbd>)
-5. Follow the [schematic](#schematic) or the [example build](#example-build)
+2. Rename the file `config.h.template` to `config.h` and open it with a text editor
+3. Set your WiFi settings in `config.h` (make sure to adequately protect this file)
+4. Start the [desktop client](https://github.com/Sv443/Node-Notifier) and copy its IP address
+5. Open the file [`ESP-Notifier.ino`](./ESP-Notifier.ino) in the [Arduino IDE](https://www.arduino.cc/en/software)
+6. Install your ESP board in the IDE ([follow this guide](https://arduino-esp8266.readthedocs.io/en/latest/installing.html))
+7. Install the library [ArduinoJson](https://arduinojson.org/) in the IDE
+8. Edit settings at the top of this file (like the server IP address)
+9. Upload the sketch with the Arduino IDE (<kbd>Ctrl</kbd> + <kbd>U</kbd>)
+10. Follow the [example build](#example-build) or the [schematic](#schematic)
 
 <br><br>
 
