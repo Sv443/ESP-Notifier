@@ -1,2 +1,8 @@
+# Config file (my WiFi password 👀)
 config.h
+
+# Cache of VS Code Arduino extension
 cache
+
+# Dev stuff
+.github/schematic_headers.pdn
