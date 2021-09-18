@@ -7,22 +7,23 @@ WiFi enabled IoT button based on ESP8266 - intended to be used with [Node-Notifi
 
 ![TODO: image](./.github/esp-notifier.png)
 
-<br><br><br><br>
+<br><br><br>
 
 # WORK IN PROGRESS
-This is a very early software, please tread carefully and at your own risk
+This is very early software, please tread carefully and at your own risk
 
 </div>
 
-<br>
+<br><br>
 
 ### Table of contents:
 - [Setup](#setup)
 - [Example build](#example-build)
+    - [Schematic](#schematic)
     - [Parts list](#parts-list)
     - [Instructions](#instructions)
-    - [Schematic](#schematic)
     - [Troubleshooting](#troubleshooting)
+- [Legal stuff](#legal-stuff)
 
 Other documents:
 - [License (MIT)](./LICENSE.txt)
@@ -45,17 +46,6 @@ Other documents:
 <br><br>
 
 ## Example build:
-
-### Parts list:
-- ESP8266EX development board (you can also use the non-EX ESP but it's larger)
-- a 4.7kΩ resistor
-- about 3x4cm of perforated circuit board, matching the size of the ESP dev board
-- female and male headers
-- a momentary push button (pretty sure SPST or SPDT are the best for this)
-- a 5v power supply with at least 500mA (like an old phone charger)
-
-<br>
-
 ### Schematic:
 Follow this schematic to build the base model of ESP-Notifier:  
 
@@ -66,6 +56,16 @@ once GPIO pin mappings are changed accordingly in the .ino file.
   
 The blue diamond shape indicates the points where I used headers to make the button and power supply detachable.  
 To see the original schematic without these markers, [click here.](./.github/schematic.png)
+
+<br>
+
+### Parts list:
+- ESP8266EX development board (you can also use the non-EX ESP but it's larger)
+- a 4.7kΩ resistor
+- about 3x4cm of perforated circuit board, matching the size of the ESP dev board
+- female and male headers
+- a momentary push button (pretty sure SPST or SPDT are the best for this)
+- a 5v power supply with at least 500mA (like an old phone charger)
 
 <br>
 
@@ -109,9 +109,28 @@ If you still need help, feel free to join my Discord server to ask me:
   
 [![Discord](https://img.shields.io/discord/565933531214118942)](https://dc.sv443.net/)
 
+<br><br>
 
+## Legal stuff:
 
-<br><br><br><br>
+### License:
+ESP-Notifier's firmware is licensed under the [MIT License](./LICENSE.txt)
+
+<br>
+
+### Disclaimer:
+This is very early software, please tread carefully and at your own risk.  
+Also make sure you adequately protect the `config.h` file, as it contains your WiFi password.
+
+<br>
+
+## Dependencies:
+- [ESP8266WiFi](https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266WiFi)
+- [ESP8266HTTPClient](https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266HTTPClient)
+- [ArduinoJson](https://arduinojson.org/)
+
+<br><br>
+<br><br>
 
 <div align="center" style="text-align: center;">
 
