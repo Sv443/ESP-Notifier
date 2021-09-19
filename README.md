@@ -56,6 +56,8 @@ Follow this schematic to build the base model of ESP-Notifier:
 I used an ESP8266EX development board but this should work on any ESP dev board,  
 once GPIO pin mappings are changed accordingly in the .ino file.  
   
+The resistor's value is approximate.  
+  
 The blue diamond shape indicates the points where I used headers to make the button and power supply detachable.  
 To see the original schematic without these markers, [click here.](./.github/schematic.png)
 
