@@ -68,7 +68,7 @@ To see the original schematic without these markers, [click here.](./.github/sch
 - a 4.7kΩ resistor
 - about 3x4cm of perforated circuit board, matching the size of the ESP dev board
 - female and male headers
-- a momentary push button (pretty sure SPST or SPDT are the best for this)
+- a momentary push button (pretty sure you're looking for an SPST type switch)
 - a 5v power supply with at least 500mA (like an old phone charger)
 
 <br>
